@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/script.js"> </script>
+  <title>Yoobee Card</title>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="logo">
+      <img src="img/yoobeeLogo.png" alt="">
+    </div>
+    <div class="search"><i class="fa fa-search" aria-hidden="true"></i></div>
+  </div>
+
+<!-- container STARTS -->
+  <div class="container">
+
+    <!-- map STARTS -->
+    <div class="map">
+
+      <!-- dropdown button STARTS -->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Find Deals near your Campus</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
+          <a href="#cityRoad">AKL City Road Campus</a>
+          <a href="#manukau">AKL Manukau Campus</a>
+          <a href="#queenStreet">AKL Queen Street Campus</a>
+          <a href="#southSeas">AKL South Seas Campus</a>
+          <a href="#christchurch">Christchurch Campus</a>
+          <a href="#rotorua">Rotorua Campus</a>
+          <a href="#wellington">Wellington Campus</a>
+        </div>
+      </div>
+      <!-- dropdown button ENDS -->
+
+    </div>
+    <!-- map ENDS -->
+
+    <!-- services and promos STARTS -->
+    <div class="services-promos">
+
+      <div class ="item-row">
+        <div class="promo"></div>
+      </div>
+
+      <div class ="item-row middle">
+        <div class="service-cards"></div>
+        <div class="service-cards"></div>
+      </div>
+
+      <div class ="item-row bottom">
+        <div class="service-cards"></div>
+        <div class="service-cards"></div>
+      </div>
+
+    </div>
+    <!-- service promos ENDS -->
+
+  </div>
+  <!-- container ENDS -->
+
+</body>
+</html>

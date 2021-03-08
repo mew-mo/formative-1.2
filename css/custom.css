@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1e5da;
+}
+
+
+/* -------- NAVIGATION -------------- */
+.nav {
+  display: flex;
+  background-color: #eff2fe;
+  height: 10vh;
+}
+
+.nav > div {
+  flex-grow: 1;
+}
+
+.nav .logo {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2.5vh;
+}
+
+.nav img {
+  height: 50%;
+}
+
+.nav .menu {
+  margin-left: 2em;
+}
+
+.nav .search {
+  text-align: right;
+  margin-right: 2em;
+}
+
+.nav .menu,
+.nav .search {
+  font-size: 1.5rem;
+  margin-top: 3.5vh;
+}
+
+.menu i:hover,
+.search i:hover,
+.logo img:hover {
+  cursor: pointer;
+}
+
+/* ----------- MAIN CONTAINER ------------- */
+.container {
+  display: flex;
+  height: 90vh;
+  flex-direction: row;
+}
+
+
+/* --------------- MAP ---------------------- */
+.map {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: #ded0ed;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*--------------- DROPDOWN MENU --------------------  */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+
+/* ------------- PROMO AND SERVICES SECTION ----------- */
+.services-promos {
+  height: 100%;
+  width: 50%;
+  background-color: #c877c1;
+}
+
+.item-row {
+  display: flex;
+  height: 33%;
+  margin-bottom: 1em;
+}
+
+.promo {
+  display: flex;
+  width: 100%;
+  height: 95%;
+  background-color: #325995;
+  margin: 10px 10px 0 10px;
+}
+
+.service-cards {
+  display: flex;
+  flex-grow: 1;
+  width: 35%;
+  height: 87%;
+  margin: 0 1em 2em 1em;
+  background-color: #a9f1e5;
+}
+
+.middle {
+  margin-top: 1.5em;
+}
+
+.bottom {
+  margin-top: -1.5em;
+}
+
+/* -------------- RESPONSIVE MEDIA QUERIES ------------------ */
+
+/* PHONES */
+@media only screen and (max-width: 600px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .map,
+  .services-promos {
+    width: 100%;
+  }
+
+  .item-row {
+    flex-direction: column;
+  }
+
+  .promo {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .service-cards {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .middle {
+    margin-top: 0;
+  }
+
+  .bottom {
+    margin-top: -1em;
+  }
+
+}
+
+  /* TABLETS */
+  @media only screen and (min-width: 600px) and (max-width:900px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .map,
+    .services-promos {
+      width: 100%;
+    }
+
+    .item-row {
+    }
+
+    .promo {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+
+
+}
