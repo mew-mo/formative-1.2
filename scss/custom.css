@@ -1,0 +1,432 @@
+/* ---------------- UNIVERSAL ELEMENTS ----------------- */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5e4; }
+
+span, .dropbtn {
+  font-family: 'Montserrat', sans-serif; }
+
+h1 {
+  font-weight: 900;
+  font-size: 2em;
+  color: #f5f5e4; }
+
+/* ------------------- NAVIGATION -------------- */
+.nav-area {
+  display: flex;
+  background-color: #1e1e21;
+  height: 10vh;
+  border-bottom: 2px solid #facf3d; }
+
+.nav-area > div {
+  flex-grow: 1; }
+
+.nav-area .logo {
+  text-align: center;
+  font-size: 30%;
+  /* ^ was 3rem */
+  margin-top: 2.5vh; }
+.nav-area img {
+  height: 60%;
+  /* ^ was 50% */ }
+.nav-area .menu {
+  margin-left: 2em; }
+.nav-area .search {
+  text-align: right;
+  margin-right: 2em; }
+.nav-area .menu,
+.nav-area .search {
+  color: #f5f5e4;
+  font-size: 1.5rem;
+  margin-top: 3.5vh; }
+
+.menu i:hover,
+.search i:hover,
+.logo img:hover {
+  cursor: pointer; }
+
+/* ----------- MAIN CONTAINER ------------- */
+.container {
+  display: flex;
+  height: 90vh;
+  flex-direction: row; }
+
+/* --------------- MAP ---------------------- */
+.map-area {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  justify-content: center;
+  align-items: center; }
+
+.map-area h1 {
+  position: absolute;
+  margin-top: -3em; }
+
+#manukauMap {
+  display: none; }
+
+#queenStreetMap {
+  display: none; }
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 50%; }
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 10.5vh;
+  width: 50%;
+  opacity: 0.4; }
+
+/*--------------- DROPDOWN MENU --------------------  */
+.dropbtn {
+  z-index: 1;
+  background-color: #2eb47d;
+  color: #f5f5e4;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  /* top: 33vh;
+  left: 5vh; */ }
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #1b9864; }
+
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd; }
+
+#myInput:focus {
+  outline: 3px solid #ddd; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* top: 33vh;
+  left: 5vh; */ }
+
+.fa-chevron-down {
+  padding-left: 7px; }
+
+.dropdown-content {
+  /* opacity: 0; */
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: scroll;
+  border: 1px solid #ddd;
+  z-index: 1; }
+
+/* possibly laptop only media queries start :) */
+#myDropdown {
+  /* position: relative; */
+  overflow: scroll;
+  /* padding-top: 45px; */ }
+
+#myInput {
+  /* position: fixed; */
+  /* top: 0; */ }
+
+/* ^^ if those don't look good for bigger screens, reserve for laptop media query */
+.dropdown-content a {
+  display: block;
+  color: #555;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem; }
+
+.dropdown a:hover {
+  background-color: #ddd; }
+
+.show {
+  /* opacity: 1; */
+  display: block; }
+
+/* ------------- PROMO AND SERVICES SECTION ----------------------------- */
+.services-promos-area {
+  height: 100%;
+  width: 50%;
+  /* background-color: #414146; */
+  background-color: #000; }
+
+.item-row {
+  display: flex;
+  height: 33%;
+  margin-bottom: 1em; }
+
+/* promo hover code------------------------------- */
+.promo:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #B4468F, #FB972B);
+  opacity: .7; }
+
+.promo {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 95%;
+  margin: 10px 10px 0 10px;
+  overflow: hidden;
+  cursor: pointer; }
+
+.promo-content {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  background-image: url(/img/dominos.jpg); }
+
+.promo-text {
+  display: none;
+  font-size: 1.5em;
+  color: #f5f5e4;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 30px;
+  cursor: pointer; }
+
+.promo:hover .promo-content,
+.promo:focus .promo-content {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.promo:hover .promo-content:before,
+.promo:focus .promo-content:before {
+  display: block; }
+
+.promo:hover .promo-text,
+.promo:focus .promo-text {
+  display: block; }
+
+.promo-content:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 0.75); }
+
+.promo:hover:after {
+  content: "";
+  opacity: .2;
+  transition: 2s ease; }
+
+/* promo hover code ENDS---------------------- */
+.service-cards {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  width: 35%;
+  height: 87%;
+  margin: 0 1em 2em 1em;
+  background-color: #f5f5e4; }
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+/* service card promos code STARTS --------- */
+.top-left {
+  background-image: url(/img/noel-leeming.jpg);
+  background-color: #e24c60;
+  background-blend-mode: hard-light;
+  border-bottom: 2px solid #e24c60; }
+
+.top-left:hover,
+.top-right:hover,
+.bottom-left:hover,
+.bottom-right:hover {
+  background-image: none; }
+
+.top-left:hover .promo-text,
+.top-right:hover .promo-text,
+.bottom-left:hover .promo-text,
+.bottom-right:hover .promo-text {
+  display: block; }
+
+.top-right {
+  background-image: url(/img/flamingo.png);
+  background-color: #b3458e;
+  background-blend-mode: hard-light;
+  border-bottom: 2px solid #b3458e; }
+
+.bottom-left {
+  background-image: url(/img/coffee-club.jpg);
+  background-color: #2eb47d;
+  background-blend-mode: hard-light;
+  border-bottom: 2px solid #2eb47d; }
+
+.bottom-right {
+  background-image: url(/img/2degrees.png);
+  background-color: #26a8c3;
+  background-blend-mode: hard-light;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #26a8c3; }
+
+.middle-row {
+  margin-top: 1.5em; }
+
+.bottom-row {
+  margin-top: -1.5em; }
+
+/* -------------- RESPONSIVE MEDIA QUERIES ------------------ */
+/* PHONES */
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    overflow-x: auto;
+    overflow-y: auto; }
+
+  .container {
+    flex-direction: column; }
+
+  .map-area,
+  .services-promos-area {
+    width: 100%; }
+
+  /* map area phone------------------------------- */
+  .map-area {
+    align-items: stretch;
+    height: 500px; }
+
+  .map-area h1 {
+    position: absolute;
+    margin-top: 5em; }
+
+  .iframe-container iframe {
+    border: 0;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 10.5vh;
+    width: 100%;
+    opacity: 0.4; }
+
+  /* dropdown button phone------------------------ */
+  .dropdown {
+    position: relative;
+    top: 23vh; }
+
+  /* services promo area phone ------------------- */
+  .services-promos-area {
+    height: auto; }
+
+  .item-row {
+    flex-direction: column;
+    height: 500px; }
+
+  .item-row:nth-child(1) {
+    height: 300px; }
+
+  .promo {
+    width: 90%;
+    height: 300px;
+    margin: 20px 10px 5px 32px; }
+
+  .service-cards {
+    width: 90%;
+    margin: 5px 10px 10px 32px;
+    height: 200px; }
+
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+  .middle {
+    margin-top: 0; }
+
+  .bottom {
+    margin-top: -1em; } }
+/* TABLETS */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  html,
+  body {
+    overflow-x: auto;
+    overflow-y: auto; }
+
+  .container {
+    flex-direction: column; }
+
+  .map-area,
+  .services-promos-area {
+    width: 100%; }
+
+  .iframe-container iframe {
+    border: 0;
+    height: 45%;
+    left: 0;
+    position: absolute;
+    top: 10.5vh;
+    width: 100%;
+    opacity: 0.4; }
+
+  .promo {
+    width: 100%;
+    margin: 10px 10px 10px 30px; }
+
+  .service-cards {
+    margin: 0 1em 2em 2em; } }
+
+/*# sourceMappingURL=custom.css.map */

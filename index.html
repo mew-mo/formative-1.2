@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="scss/custom.css">
   <title>Yoobee Card || Deals for Yoobee Students</title>
 </head>
 
@@ -29,7 +29,13 @@
     <!-- map area STARTS -->
     <div class="map-area">
 
-      <div class="map-bg" id="cityRoad"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.3895259442506!2d174.7622295152915!3d-36.857094079936864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e64696884b%3A0xc688b8a45f73d60a!2sYoobee%20Colleges%20-%20Auckland%20City%20Road%20Campus!5e0!3m2!1sen!2snz!4v1615707689367!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+      <div class="iframe-container" id="cityRoadMap"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.3895259442506!2d174.7622295152915!3d-36.857094079936864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e64696884b%3A0xc688b8a45f73d60a!2sYoobee%20Colleges%20-%20Auckland%20City%20Road%20Campus!5e0!3m2!1sen!2snz!4v1615707689367!5m2!1sen!2snz"></iframe></div>
+
+      <div class="iframe-container" id="manukauMap"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.7720503244814!2d174.88223621267076!3d-36.99137396145643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4db2b162fdfb%3A0x44df53db0a28260b!2sYoobee%20Colleges!5e0!3m2!1sen!2snz!4v1615760840729!5m2!1sen!2snz"></iframe></div>
+
+      <div class="iframe-container" id="queenStreetMap"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.4329399407034!2d174.7597759157734!3d-36.856054679937124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fad46ee85d%3A0x343de32805e68a5a!2sYoobee%20Colleges%20-%20Auckland%20Queen%20Street%20Campus!5e0!3m2!1sen!2snz!4v1615761654749!5m2!1sen!2snz"></iframe></div>
+
+
 
       <!-- title text STARTS -->
       <h1>Deals near your Campus</h1>
@@ -40,8 +46,8 @@
         <button onclick="myFunction()" class="dropbtn">Select Campus <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
         <div id="myDropdown" class="dropdown-content">
           <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
-          <a href="#cityRoad" id="AKLCity">AKL City Road Campus</a>
-          <a href="#manukau">AKL Manukau Campus</a>
+          <a href="" id="cityRoad">AKL City Road Campus</a>
+          <a href="#manukau" id="manukau">AKL Manukau Campus</a>
           <a href="#queenStreet">AKL Queen Street Campus</a>
           <a href="#southSeas">AKL South Seas Campus</a>
           <a href="#christchurch">Christchurch Campus</a>
@@ -115,7 +121,6 @@
   </div>
   <!-- container ENDS -->
 
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
   <script src="js/script.js"> </script>
 
 </body>

@@ -1,3 +1,8 @@
+// variables!! :D
+
+@import 'vars';
+
+
 /* ---------------- UNIVERSAL ELEMENTS ----------------- */
 
 html,
@@ -11,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #f1e5da;
+  background-color: $off-white;
 }
 
 span, .dropbtn {
@@ -21,48 +26,50 @@ span, .dropbtn {
 h1 {
   font-weight: 900;
   font-size: 2em;
-  color: #f5f5e4;
+  color: $off-white;
 }
 
 
 /* ------------------- NAVIGATION -------------- */
 .nav-area {
   display: flex;
-  background-color: #1e1e21;
+  background-color: $off-black;
   height: 10vh;
-  border-bottom: 2px solid #facf3d;
+  border-bottom: 2px solid $yoobee-yellow;
 }
 
 .nav-area > div {
   flex-grow: 1;
 }
 
-.nav-area .logo {
-  text-align: center;
-  font-size: 30%;
-  /* ^ was 3rem */
-  margin-top: 2.5vh;
-}
+.nav-area {
+  .logo {
+    text-align: center;
+    font-size: 30%;
+    /* ^ was 3rem */
+    margin-top: 2.5vh;
+  }
 
-.nav-area img {
-  height: 60%;
-  /* ^ was 50% */
-}
+  img {
+    height: 60%;
+    /* ^ was 50% */
+  }
 
-.nav-area .menu {
-  margin-left: 2em;
-}
+  .menu {
+    margin-left: 2em;
+  }
 
-.nav-area .search {
-  text-align: right;
-  margin-right: 2em;
-}
+  .search {
+    text-align: right;
+    margin-right: 2em;
+  }
 
-.nav-area .menu,
-.nav-area .search {
-  color: #f5f5e4;
-  font-size: 1.5rem;
-  margin-top: 3.5vh;
+  .menu,
+  .search {
+    color: $off-white;
+    font-size: 1.5rem;
+    margin-top: 3.5vh;
+  }
 }
 
 .menu i:hover,
@@ -84,7 +91,8 @@ h1 {
   display: flex;
   height: 100%;
   width: 50%;
-  background-color: #5b5b63;
+  // background-color: #5b5b63;
+  background-color: #000;
   justify-content: center;
   align-items: center;
 }
@@ -94,28 +102,40 @@ h1 {
   margin-top: -3em;
 }
 
-#cityRoad {
-  display: none;
-  z-index: 0;
-  color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+#cityRoadMap {
+  // display: none;
 }
 
-/* .map-bg {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-} */
+#manukauMap {
+  display: none;
+}
 
+#queenStreetMap {
+  display: none;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 50%;
+}
+
+.iframe-container {
+ iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 10.5vh;
+  width: 50%;
+  opacity: 0.4;
+  }
+}
 
 /*--------------- DROPDOWN MENU --------------------  */
 .dropbtn {
   z-index: 1;
-  background-color: #4CAF50;
-  color: white;
+  background-color: $yoobee-green;
+  color: $off-white;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -127,7 +147,7 @@ h1 {
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: #3e8e41;
+  background-color: $yoobee-green-dark;
 }
 
 #myInput {
@@ -251,7 +271,7 @@ h1 {
 .promo-text {
     display: none;
     font-size: 1.5em;
-    color: #ffffff;
+    color: $off-white;
     text-align: center;
     margin: auto;
     position: absolute;
@@ -308,37 +328,8 @@ h1 {
   width: 35%;
   height: 87%;
   margin: 0 1em 2em 1em;
-  background-color: #fff;
+  background-color: $off-white;
 }
-
-/* .noel-leemings:after,
-.flamingo:after,
-.coffee-club:after,
-.two-degrees:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: .4;
-}
-
-.noel-leemings:after {
-  background-image: -webkit-linear-gradient(30deg, #000, #000);
-}
-
-.flamingo:after {
-  background-image: -webkit-linear-gradient(30deg, #000, #000);
-}
-
-.coffee-club:after {
-  background-image: -webkit-linear-gradient(30deg, #000, #000);
-}
-
-.two-degrees:after {
-  background-image: -webkit-linear-gradient(30deg, #000, #000);
-} */
 
 
 .top-left,
@@ -360,26 +351,45 @@ h1 {
 
 .top-left {
   background-image: url(/img/noel-leeming.jpg);
-  background-color: #e24c60;
+  background-color: $yoobee-red;
   background-blend-mode: hard-light;
+  border-bottom: 2px solid $yoobee-red;
+}
+
+.top-left:hover,
+.top-right:hover,
+.bottom-left:hover,
+.bottom-right:hover {
+  background-image: none;
+}
+
+.top-left:hover .promo-text,
+.top-right:hover .promo-text,
+.bottom-left:hover .promo-text,
+.bottom-right:hover .promo-text {
+  display: block;
 }
 
 .top-right {
   background-image: url(/img/flamingo.png);
-  background-color: #b3458e;
+  background-color: $yoobee-pink;
   background-blend-mode: hard-light;
+  border-bottom: 2px solid $yoobee-pink;
 }
 
 .bottom-left {
   background-image: url(/img/coffee-club.jpg);
-  background-color: #2eb47d;
+  background-color: $yoobee-green;
   background-blend-mode: hard-light;
+  border-bottom: 2px solid $yoobee-green;
 }
 
 .bottom-right {
   background-image: url(/img/2degrees.png);
-  background-color: #26a8c3;
+  background-color: $yoobee-blue;
   background-blend-mode: hard-light;
+  padding-bottom: 2px;
+  border-bottom: 2px solid $yoobee-blue;
 }
 
 .middle-row {
@@ -421,10 +431,22 @@ h1 {
     margin-top: 5em;
   }
 
+  .iframe-container {
+   iframe {
+    border: 0;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 10.5vh;
+    width: 100%;
+    opacity: 0.4;
+    }
+  }
+
 /* dropdown button phone------------------------ */
   .dropdown {
     position: relative;
-    top: 33vh;
+    top: 23vh;
   }
 
 /* services promo area phone ------------------- */
@@ -464,7 +486,7 @@ h1 {
     -o-transition: all .5s;
     transition: all .5s;
     background-position: center;
-    background-size: cover%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -496,6 +518,18 @@ h1 {
       width: 100%;
     }
 
+    .iframe-container {
+     iframe {
+      border: 0;
+      height: 45%;
+      left: 0;
+      position: absolute;
+      top: 10.5vh;
+      width: 100%;
+      opacity: 0.4;
+      }
+    }
+
     .promo {
       width: 100%;
       margin: 10px 10px 10px 30px;
@@ -504,6 +538,4 @@ h1 {
     .service-cards {
       margin: 0 1em 2em 2em;
     }
-
   }
-}
