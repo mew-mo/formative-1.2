@@ -29,7 +29,7 @@
     <!-- map area STARTS -->
     <div class="map-area">
 
-      <div class="map-bg" id="cityRoad"></div>
+      <div class="map-bg" id="cityRoad"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.3895259442506!2d174.7622295152915!3d-36.857094079936864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e64696884b%3A0xc688b8a45f73d60a!2sYoobee%20Colleges%20-%20Auckland%20City%20Road%20Campus!5e0!3m2!1sen!2snz!4v1615707689367!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
 
       <!-- title text STARTS -->
       <h1>Deals near your Campus</h1>
@@ -40,7 +40,7 @@
         <button onclick="myFunction()" class="dropbtn">Select Campus <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
         <div id="myDropdown" class="dropdown-content">
           <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
-          <a href="#cityRoad">AKL City Road Campus</a>
+          <a href="#cityRoad" id="AKLCity">AKL City Road Campus</a>
           <a href="#manukau">AKL Manukau Campus</a>
           <a href="#queenStreet">AKL Queen Street Campus</a>
           <a href="#southSeas">AKL South Seas Campus</a>
@@ -58,7 +58,7 @@
     <div class="services-promos-area">
 
       <!-- item row top STARTS -->
-      <div class="item-row top">
+      <div class="item-row top-row">
           <!-- promo STARTS -->
         <div class="promo">
           <div class="promo-content">
@@ -69,15 +69,45 @@
       </div>
       <!-- item row top ENDS -->
 
-      <div class="item-row middle">
-        <div class="service-cards"></div>
-        <div class="service-cards"></div>
-      </div>
+      <!-- middle item row STARTS -->
+      <div class="item-row middle-row">
 
-      <div class="item-row bottom">
-        <div class="service-cards"></div>
-        <div class="service-cards"></div>
+        <!-- top left service card STARTS -->
+        <div class="service-cards noel-leemings">
+          <div class="top-left">
+            <span class="promo-text">Various Savings </span>
+          </div>
+        </div>
+        <!-- top left service card ENDS -->
+
+        <!-- top right service card STARTS -->
+        <div class="service-cards flamingo">
+          <div class="top-right">
+            <span class="promo-text">15 minutes free</span>
+          </div>
+        </div>
+        <!-- top right service card ENDS -->
       </div>
+      <!-- middle item row ENDS -->
+
+      <!-- bottom item row STARTS -->
+      <div class="item-row bottom-row">
+
+        <div class="service-cards">
+          <div class="bottom-left coffee-club">
+            <span class="promo-text">20% online discount</span>
+          </div>
+        </div>
+
+        <div class="service-cards">
+          <div class="bottom-right two-degrees">
+            <span class="promo-text">500mb weekend data</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- bottom item row ENDS -->
+
 
     </div>
     <!-- service promos area ENDS -->

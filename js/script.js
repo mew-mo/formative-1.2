@@ -18,6 +18,13 @@ function filterFunction() {
   }
 }
 
+$('document').ready(function(){
+  $('.logo').click(function(){
+    alert('yea its working');
+  });
+});
+
+
 
 // var position = [-36.8570941,174.7622295];
 //
