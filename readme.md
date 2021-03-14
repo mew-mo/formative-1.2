@@ -37,8 +37,7 @@ In simple honesty, this is being made for class. But to be more precise, our pro
 <link rel="stylesheet" href="css/custom.css">
 ```
 
-*Google Maps and Customs scripts just before <body\> ends*
-``` JS
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+*Custom script just before <body\> ends*
+``` HTML
 <script src="js/script.js"> </script>
 ```
