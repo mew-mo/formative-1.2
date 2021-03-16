@@ -1,13 +1,3 @@
-
-
-$('document').ready(function(){
-  $('.logo').click(function(){
-    alert('this is functioning everything is nice and life is good');
-  });
-});
-
-
-
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
