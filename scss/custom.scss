@@ -5,6 +5,10 @@
 
 /* ---------------- UNIVERSAL ELEMENTS ----------------- */
 
+* {
+    outline: 1px solid red;
+}
+
 html,
 body {
   height: 100%;
@@ -311,7 +315,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-/* service card promos code STARTS --------- */
+/* service card promos code ------------- */
 
 .top-left {
   background-image: url(/img/noel-leeming.jpg);
@@ -388,29 +392,28 @@ h1 {
   .map-area {
     align-items:stretch;
     height: 500px;
-  }
 
-  .map-area h1 {
-    position: absolute;
-    margin-top: 5em;
-  }
-
-  .iframe-container {
-   iframe {
-    border: 0;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    top: 10.5vh;
-    width: 100%;
-    opacity: 0.4;
+    h1 {
+      position: relative;
+      margin-top: 3.5em;
+      left: 15%;
+      text-align: center;
     }
   }
 
-/* dropdown button phone------------------------ */
   .dropdown {
     position: relative;
-    top: 23vh;
+    top: 33vh;
+    right: 35%;
+  }
+
+
+  .iframe-container {
+   iframe {
+    height: 75%;
+    top: 10.5vh;
+    width: 100%;
+    }
   }
 
 /* services promo area phone ------------------- */
@@ -430,12 +433,12 @@ h1 {
   .promo {
     width: 90%;
     height: 300px;
-    margin: 20px 10px 5px 32px;
+    margin: 20px 20px 5px 20px;
   }
 
   .service-cards {
     width: 90%;
-    margin: 5px 10px 10px 32px;
+    margin: 20px 20px 5px 20px;
     height: 200px;
   }
 
@@ -482,21 +485,33 @@ h1 {
       width: 100%;
     }
 
+    .map-area {
+      h1 {
+        position: relative;
+        margin-top: -3em;
+        left: 10%;
+      }
+    }
+
+    .dropdown {
+      right: 30%;
+    }
+
     .iframe-container {
      iframe {
-      border: 0;
-      height: 45%;
-      left: 0;
-      position: absolute;
+      height: 55%;
       top: 10.5vh;
       width: 100%;
-      opacity: 0.4;
       }
+    }
+
+    .services-promos-area {
+      height: 800px;
     }
 
     .promo {
       width: 100%;
-      margin: 10px 10px 10px 30px;
+      margin: 10px 10px 10px 10px;
     }
 
     .service-cards {
