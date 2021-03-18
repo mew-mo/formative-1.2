@@ -26,7 +26,7 @@ In simple honesty, this is being made for class. But to be more precise, our pro
 * CSS
 * Javascript
 
--
+
 
 ###### :sparkles: Links
 *Google Fonts, Font Awesome (for icons) and Custom CSS in the <head\>*
@@ -37,8 +37,8 @@ In simple honesty, this is being made for class. But to be more precise, our pro
 <link rel="stylesheet" href="css/custom.css">
 ```
 
-*Google Maps and Customs scripts just before <body\> ends*
-``` JS
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="js/script.js"> </script>
+*JQuery and Custom scripts just before <body\> ends*
+``` HTML
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+ <script src="js/script.js"> </script>
 ```
